@@ -1,5 +1,3 @@
-# TODO: Enable GitHub Actions on the repository to test all pull requests
-# https://github.com/<org>/<repo>/actions
 name: CI
 
 on:
@@ -33,3 +31,15 @@ jobs:
             -e DATABASE_CLEANER_ALLOW_REMOTE_DATABASE_URL=true \
             -e DATABASE_URL=postgres://test@pg:5432/app_test \
             app:test bundle exec rake
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    if: success() && (github.ref == 'refs/heads/develop')
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.6.8
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "h-e-affordable-housing-staging"
+          heroku_email: "accounts-heroku@dxw.com"

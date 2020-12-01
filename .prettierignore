@@ -5,6 +5,7 @@
 !/*.md
 /.bundle/
 /bin/
+/coverage/
 /log/
 /script/
 /storage/

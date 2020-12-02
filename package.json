@@ -8,8 +8,10 @@
     "lint:js:fix": "yarn run lint:js --fix"
   },
   "dependencies": {
+    "@rails/ujs": "^6.0.3-4",
     "@rails/webpacker": "5.2.1",
-    "govuk-frontend": "^3.10.1"
+    "govuk-frontend": "^3.10.1",
+    "turbolinks": "^5.2.0"
   },
   "devDependencies": {
     "eslint": "^7.14.0",

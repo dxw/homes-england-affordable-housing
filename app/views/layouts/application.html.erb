@@ -20,6 +20,7 @@
 
   <%= stylesheet_pack_tag "stylesheets/application", media: "all" %>
   <%= stylesheet_pack_tag "stylesheets/govuk", media: "all" %>
+  <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
 
   <meta property="og:image" content="<%= asset_pack_url("media/images/govuk-opengraph-image.png") %>">
 </head>
@@ -93,6 +94,5 @@
     </div>
   </footer>
   <%= javascript_pack_tag "govuk", "data-turbolinks-track": "reload" %>
-  <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
 </body>
 </html>

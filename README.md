@@ -1,4 +1,3 @@
-
 # Homes England - Apply for Affordable Housing Fund
 
 TODO: Add a summary of who the application is for and what it will do.

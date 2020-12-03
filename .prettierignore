@@ -5,6 +5,7 @@
 !/*.md
 /.bundle/
 /bin/
+/coverage/
 /log/
 /script/
 /storage/
@@ -23,3 +24,5 @@
 *.ru
 *.sh
 *.txt
+/.idea/*.*
+/.idea/*/*.*

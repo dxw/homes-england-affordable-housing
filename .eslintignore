@@ -2,3 +2,5 @@
 /log/
 /tmp/
 /vendor/
+/public/packs-test/
+/public/packs/

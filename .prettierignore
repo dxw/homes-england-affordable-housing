@@ -26,3 +26,5 @@
 *.txt
 /.idea/*.*
 /.idea/*/*.*
+/public/packs-test/
+/public/packs/

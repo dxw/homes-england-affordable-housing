@@ -22,6 +22,7 @@ COPY Gemfile.lock $INSTALL_PATH/Gemfile.lock
 
 RUN gem update --system
 RUN gem install bundler
+RUN npm install -g yarn
 
 # bundle ruby gems based on the current environment, default to production
 RUN echo $RAILS_ENV

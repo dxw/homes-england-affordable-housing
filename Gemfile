@@ -4,21 +4,18 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.7.1"
 
+gem "rails", "~> 6.0.0"
 gem "bootsnap", ">= 1.1.0", require: false
-gem "bootstrap", ">= 4.3.1"
-gem "coffee-rails", "~> 5.0"
 gem "high_voltage"
 gem "jbuilder", "~> 2.5"
-gem "jquery-rails"
 gem "pg"
 gem "mini_racer"
 gem "puma", "~> 5.0"
 gem "rollbar"
-gem "rails", "~> 6.0.0"
-gem "sass-rails", "~> 6.0"
 gem "turbolinks", "~> 5"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "uglifier", ">= 1.3.0"
+gem "webpacker"
 
 gem "omniauth-auth0", "~> 2.2"
 gem "omniauth-rails_csrf_protection", "~> 0.1"

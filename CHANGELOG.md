@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog 1.0.0].
 - Add basic authentication with Auth0
 - Add Webpacker
 - Add GOV.UK frontend package and layout
+- Use Redis as a server side session store
 
 [unreleased]: TODO
 [keep a changelog 1.0.0]: https://keepachangelog.com/en/1.0.0/

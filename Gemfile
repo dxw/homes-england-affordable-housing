@@ -11,6 +11,10 @@ gem "jbuilder", "~> 2.5"
 gem "pg"
 gem "mini_racer"
 gem "puma", "~> 5.0"
+gem "redis", "~> 4.2", ">= 4.2.5"
+gem "redis-namespace"
+gem "redis-actionpack"
+gem "redis-store"
 gem "rollbar"
 gem "turbolinks", "~> 5"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
@@ -29,6 +33,7 @@ end
 
 group :test do
   gem "capybara", ">= 2.15"
+  gem "fakeredis", require: false
   gem "selenium-webdriver"
   gem "simplecov"
 end

@@ -10,7 +10,7 @@ gem "high_voltage"
 gem "jbuilder", "~> 2.5"
 gem "pg"
 gem "mini_racer"
-gem "puma", "~> 5.0"
+gem "puma", "~> 5.1"
 gem "rollbar"
 gem "turbolinks", "~> 5"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]

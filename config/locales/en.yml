@@ -35,3 +35,4 @@ en:
   errors:
     auth0:
       invalid_credentials: Invalid credentials
+      generic: "An unknown error has occurred. Please try signing in again."

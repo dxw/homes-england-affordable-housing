@@ -18,7 +18,10 @@ class AuthController < ApplicationController
 
   def failure
     message = request.params["message"]
-    @error_message = t("errors.auth0.#{message.to_sym}")
+    @error_message = I18n.t("errors.auth0.#{message.to_sym}", raise: true)
+  rescue I18n::MissingTranslationData
+    Rollbar.log(:info, "Unknown response from Auth0", message)
+    @error_message = I18n.t("errors.auth0.generic")
   end
 
   def logout

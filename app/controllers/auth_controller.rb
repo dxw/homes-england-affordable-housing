@@ -2,11 +2,17 @@ class AuthController < ApplicationController
   include LogoutHelper
 
   def callback
-    # This stores all the user information that came from Auth0
-    # and the IdP
-    session[:userinfo] = request.env.fetch("omniauth.auth")
+    # Store the uid, name and email address only for now
+    auth_response = request.env.fetch("omniauth.auth")
+    userinfo = {
+      "uid" => auth_response[:uid],
+      "info" => {
+        "name" => auth_response[:info][:name],
+        "email" => auth_response[:info][:email]
+      }
+    }
+    session[:userinfo] = userinfo
 
-    # Redirect to the URL you want after successful auth
     redirect_to dashboard_path
   end
 

@@ -26,4 +26,16 @@ feature "Log in" do
     expect(page).to_not have_content("You are logged in")
     expect(page).to have_content("Invalid credentials")
   end
+
+  scenario "An unknown error from Auth0 is logged to Rollbar" do
+    mock_unknown_error_failure
+    allow(Rollbar).to receive(:log)
+
+    visit root_path
+    click_button "Sign in"
+
+    expect(page).to_not have_content("You are logged in")
+    expect(page).to have_content(I18n.t("errors.auth0.generic"))
+    expect(Rollbar).to have_received(:log).with(:info, "Unknown response from Auth0", "unknown_error")
+  end
 end

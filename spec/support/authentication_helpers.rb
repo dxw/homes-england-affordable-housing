@@ -13,4 +13,8 @@ module AuthenticationHelpers
   def mock_invalid_credentials_failure
     OmniAuth.config.mock_auth[:auth0] = :invalid_credentials
   end
+
+  def mock_unknown_error_failure
+    OmniAuth.config.mock_auth[:auth0] = :unknown_error
+  end
 end

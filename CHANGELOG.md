@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog 1.0.0].
 - Add Webpacker
 - Add GOV.UK frontend package and layout
 - Reduce cookie size to avoid ActionDispatch::Cookies::CookieOverflow error
+- Enable Rollbar and capture unknown errors from Auth0 using Rollbar
 
 [unreleased]: TODO
 [keep a changelog 1.0.0]: https://keepachangelog.com/en/1.0.0/

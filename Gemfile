@@ -48,6 +48,7 @@ group :development, :test do
   gem "faker"
   gem "pry"
   gem "rspec-rails"
+  gem "shoulda-matchers", "~> 4.4", ">= 4.4.1"
   gem "standard"
 end
 

@@ -8,5 +8,5 @@ providers.each do |provider|
     designation: Provider.designations.key(provider["Designation"]),
     corporate_form: Provider.corporate_forms.key(provider["Corporate Form"])
   }
-  Provider.find_or_create_by(registration_number: provider["Registration Number"]).update(provider_params)
+  Provider.find_or_create_by!(registration_number: provider.fetch("Registration Number")).update!(provider_params)
 end
